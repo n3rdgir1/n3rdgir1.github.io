@@ -1,5 +1,6 @@
 h1, h2 {
   color: purple;
+  clear: both;
 }
 
 p {
@@ -13,11 +14,49 @@ p {
 
   padding: 10px 20px;
 
+}
+
+.main, img {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
 }
 
+.left {
+  width: 48%;
+  margin-right: 2%;
+  display: inline-block;
+}
+
+.right {
+  width: 48%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+@media(max-width: 650px) {
+  .left, .right {
+    display: block;
+    width: 100%;
+  }
+}
+
 body {
-  background-color: black;
+  background: -webkit-linear-gradient(black, grey);
+  background: -o-linear-gradient(black, grey);
+  background: -moz-linear-gradient(black, grey);
+  background: linear-gradient(black, grey);
+  min-height: 700px;
+}
+
+img {
+  max-width: 100%;
+}
+
+.thumbnail {
+  height: 100px;
+  float: left;
+  display: inline-block;
+  margin-right: 20px;
+  margin-bottom: 20px;
 }
