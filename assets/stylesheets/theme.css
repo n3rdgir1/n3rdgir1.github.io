@@ -1,5 +1,42 @@
-h1, h2 {
+h1 {
+  color: white;
+}
+
+h2 {
   color: purple;
+}
+
+span {
+  color: white;
+}
+
+.header {
+  margin: 50px auto;
+  max-width: 1040px;
+  font: 13px "Myriad Pro", "Trebuchet MS", Helvetica, Arial, sans-serif;
+}
+
+.header * {
+  width: auto;
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.header h1 {
+  border-right: 1px solid white;
+  padding-right: 15px;
+  font-variant: small-caps;
+  font-size: 52px;
+}
+
+.header h2 {
+  font-size: 18px;
+  color: #d480de;
+  position: relative;
+  top: -13px;
+}
+
+.clear {
   clear: both;
 }
 
@@ -13,10 +50,9 @@ p {
   background-color: white;
 
   padding: 10px 20px;
-
 }
 
-.main, img {
+img {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
@@ -32,13 +68,6 @@ p {
   width: 48%;
   display: inline-block;
   vertical-align: top;
-}
-
-@media(max-width: 650px) {
-  .left, .right {
-    display: block;
-    width: 100%;
-  }
 }
 
 body {
@@ -59,4 +88,22 @@ img {
   display: inline-block;
   margin-right: 20px;
   margin-bottom: 20px;
+}
+
+@media(max-width: 650px) {
+  .header h1,h2 {
+    border: none;
+    -webkit-margin-after: 10px;
+    -moz-margin-after: 10px;
+    marin-bottom: 10px;
+  }
+
+  .main, .header {
+    margin: 20px auto;
+  }
+
+  .left, .right {
+    display: block;
+    width: 100%;
+  }
 }
