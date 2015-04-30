@@ -12,18 +12,11 @@ span {
 
 .header {
   margin: 50px auto;
-  max-width: 980px;
   font: 13px "Myriad Pro", "Trebuchet MS", Helvetica, Arial, sans-serif;
 }
 
-.header * {
-  width: auto;
-  display: inline-block;
-  margin-right: 20px;
-}
 
 .header h1 {
-  border-right: 1px solid white;
   padding-right: 15px;
   font-variant: small-caps;
   font-size: 52px;
@@ -32,8 +25,6 @@ span {
 .header h2 {
   font-size: 18px;
   color: #d480de;
-  position: relative;
-  top: -13px;
 }
 
 .clear {
@@ -44,9 +35,12 @@ p {
   margin: 10px;
 }
 
-.main {
-  margin: 50px auto;
+.content {
   max-width: 940px;
+  margin: 0 auto;
+}
+
+.main {
   background-color: white;
 
   padding: 5px 10px;
@@ -58,24 +52,12 @@ img {
   border-radius: 5px;
 }
 
-.left {
-  width: 65%;
-  margin-right: 2%;
-  display: inline-block;
-}
-
-.right {
-  width: 32%;
-  display: inline-block;
-  vertical-align: top;
-}
 
 body {
   background: -webkit-linear-gradient(black, grey);
   background: -o-linear-gradient(black, grey);
   background: -moz-linear-gradient(black, grey);
   background: linear-gradient(black, grey);
-  min-height: 700px;
 }
 
 img {
@@ -83,27 +65,48 @@ img {
 }
 
 .thumbnail {
-  height: 100px;
+  height: 150px;
   float: left;
   display: inline-block;
   margin-right: 20px;
   margin-bottom: 20px;
 }
 
-@media(max-width: 650px) {
-  .header h1,h2 {
-    border: none;
-    -webkit-margin-after: 10px;
-    -moz-margin-after: 10px;
-    marin-bottom: 10px;
+.header h1,h2 {
+  -webkit-margin-after: 10px;
+  -moz-margin-after: 10px;
+  marin-bottom: 10px;
+}
+
+.main, .header {
+  margin: 20px auto;
+}
+
+@media only screen and (min-device-width: 850px) {
+  .header * {
+    width: auto;
+    display: inline-block;
+    margin-right: 20px;
   }
 
-  .main, .header {
-    margin: 20px auto;
+  .header h1 {
+    border-right: 1px solid white;
   }
 
-  .left, .right {
-    display: block;
-    width: 100%;
+  .header h2 {
+    position: relative;
+    top: -13px;
+  }
+
+  .left {
+    width: 65%;
+    margin-right: 2%;
+    display: inline-block;
+  }
+
+  .right {
+    width: 32%;
+    display: inline-block;
+    vertical-align: top;
   }
 }
