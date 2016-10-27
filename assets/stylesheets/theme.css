@@ -11,20 +11,30 @@ span {
 }
 
 .header {
-  margin: 50px auto;
-  font: 13px "Myriad Pro", "Trebuchet MS", Helvetica, Arial, sans-serif;
+  font-family: "Myriad Pro", "Trebuchet MS", Helvetica, Arial, sans-serif;
 }
-
-
 .header h1 {
   padding-right: 15px;
   font-variant: small-caps;
   font-size: 52px;
+  margin: 10px 15px 10px 0;
 }
-
 .header h2 {
   font-size: 18px;
   color: #d480de;
+}
+.main, .header {
+  margin: 20px;
+}
+@media(min-width: 850px) {
+  .header {
+    display: flex;
+    align-items: center;
+  }
+
+  .header h1 {
+    border-right: 1px solid white;
+  }
 }
 
 .clear {
@@ -54,10 +64,7 @@ img {
 
 
 body {
-  background: -webkit-linear-gradient(black, grey);
-  background: -o-linear-gradient(black, grey);
-  background: -moz-linear-gradient(black, grey);
-  background: linear-gradient(black, grey);
+  background: black;
 }
 
 img {
@@ -72,32 +79,7 @@ img {
   margin-bottom: 20px;
 }
 
-.header h1,h2 {
-  -webkit-margin-after: 10px;
-  -moz-margin-after: 10px;
-  marin-bottom: 10px;
-}
-
-.main, .header {
-  margin: 20px auto;
-}
-
 @media only screen and (min-device-width: 850px) {
-  .header * {
-    width: auto;
-    display: inline-block;
-    margin-right: 20px;
-  }
-
-  .header h1 {
-    border-right: 1px solid white;
-  }
-
-  .header h2 {
-    position: relative;
-    top: -13px;
-  }
-
   .left {
     width: 65%;
     margin-right: 2%;
