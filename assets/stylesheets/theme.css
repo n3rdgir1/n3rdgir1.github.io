@@ -23,9 +23,6 @@ span {
   font-size: 18px;
   color: #d480de;
 }
-.main, .header {
-  margin: 20px;
-}
 @media(min-width: 850px) {
   .header {
     display: flex;
@@ -45,7 +42,7 @@ p {
   margin: 10px;
 }
 
-.content {
+.content, .header {
   max-width: 940px;
   margin: 0 auto;
 }
