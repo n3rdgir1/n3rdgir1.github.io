@@ -61,10 +61,6 @@ function appendContent(article, text) {
     });
   }
   article.appendChild(content);
-
-//  return text.replace(urlRegex, function(url) {
-//    return '<a href="' + url + '">link</a>';
-//  })
 }
 
 function loadTweets() {
