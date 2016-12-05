@@ -117,13 +117,13 @@ body {
   }
 
   .left {
-    width: 65%;
-    margin-right: 2%;
+    flex-grow: 2;
     display: inline-block;
   }
 
   .right {
-    width: 32%;
+    flex-grow: 1;
+    flex-basis: 40%;
     display: inline-block;
     vertical-align: top;
   }
