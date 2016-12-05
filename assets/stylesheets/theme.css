@@ -6,10 +6,6 @@ h2 {
   color: purple;
 }
 
-span {
-  color: white;
-}
-
 .header {
   font-family: "Myriad Pro", "Trebuchet MS", Helvetica, Arial, sans-serif;
 }
@@ -82,6 +78,17 @@ body {
 }
 .right h2 {
   color: white;
+}
+
+#blog span {
+  color: purple;
+}
+
+#blog article * {
+  margin-left: 15px;
+}
+#blog article h3 {
+  margin-left: 0;
 }
 
 @media (min-width: 650px) {
