@@ -53,8 +53,11 @@ function appendContent(article, text) {
     $.each(texts, function (i, text) {
       if(text.match(urlRegex)){
         var link = document.createElement('a');
+        if(!text.match(/^http/g))
+          text = 'http://' + text;
         link.href=text;
-        link.appendChild(document.createTextNode("link"));
+        link.target = '_blank';
+        link.appendChild(document.createTextNode(text.split('/')[2]));
         content.append(link);
       } else
         content.append(text);
