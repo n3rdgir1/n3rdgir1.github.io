@@ -76,8 +76,14 @@ function loadTweets() {
         $.each(data.responseData.feed.entries, function (i, e) {
           var article = document.createElement('article');
 
+          var handleRegex = /(\(@[^\s]+\))/g;
+          var titles = e.author.split(handleRegex);
           var author = document.createElement('h3');
-          author.appendChild(document.createTextNode(e.author));
+          author.appendChild(document.createTextNode(titles[0]));
+          var handle = document.createElement('span');
+          handle.appendChild(document.createTextNode(titles[1]));
+          author.appendChild(handle);
+
           article.appendChild(author);
 
           var date = document.createElement('span');
