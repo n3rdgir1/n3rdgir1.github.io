@@ -131,6 +131,7 @@ body {
     height: 600px;
     overflow-y: scroll;
     overflow-x: hidden;
+    border-radius: 5px;
   }
   #tweets::-webkit-scrollbar {
     display: none;
