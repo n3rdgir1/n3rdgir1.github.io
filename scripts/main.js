@@ -6,9 +6,10 @@ function formatDate(string) {
 function loadBlog() {
   var blog = document.getElementById('blog');
   $.ajax({
-    url      : 'https://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&callback=?&q=' + encodeURIComponent("https://girlbitsnbytes.wordpress.com/feed/"),
-    dataType : 'json',
+    url      : "https://girlbitsnbytes.wordpress.com/feed/",
+    dataType : 'xmlp',
     success  : function (data) {
+      console.log(data);
       if (data.responseData.feed && data.responseData.feed.entries) {
         $.each(data.responseData.feed.entries, function (i, e) {
           if(i < 3) {
