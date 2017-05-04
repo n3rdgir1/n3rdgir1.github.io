@@ -70,7 +70,7 @@ img {
     display: flex;
   }
   .left {
-    flex: 2 0;
+    flex: 3 0;
   }
   .right {
     flex: 1 0;
