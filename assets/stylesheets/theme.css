@@ -9,6 +9,15 @@ h2 {
 .header {
   font-family: "Myriad Pro", "Trebuchet MS", Helvetica, Arial, sans-serif;
 }
+
+body {
+  background: black;
+  margin: 0;
+  min-width: 300px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
 .header h1 {
   padding-right: 15px;
   font-variant: small-caps;
@@ -19,33 +28,21 @@ h2 {
   font-size: 18px;
   color: #d480de;
 }
-.header .content {
+.header {
   margin-top: 30px;
   margin-bottom: 10px;
 }
 
-p {
-  margin: 10px 0;
+.main {
+  max-width: 940px;
 }
 
 .content {
-  max-width: 940px;
-  margin: 0 auto;
-}
-
-.main {
   background-color: white;
   margin-bottom: 30px;
 }
-
-.left {
-  padding: 15px;
-}
-.main ul {
-  display: inline-block;
-  margin: 0;
-  list-style: none;
-  line-height: 1.5em;
+.content > div {
+  padding: 1em;
 }
 
 img {
@@ -55,29 +52,65 @@ img {
   max-width: 100%;
 }
 
-body {
-  background: black;
-  margin: 0;
-  min-width: 300px;
-}
-
 .thumbnail {
-  height: 150px;
+  height: 200px;
   display: inline-block;
-}
-
-.main .callout {
-  display: flex;
-  align-items: flex-start;
 }
 
 .right {
   background-color: purple;
   color: white;
-  padding: 15px;
 }
 .right h2 {
   color: white;
+}
+
+@media (min-width: 650px) {
+  .content {
+    display: flex;
+  }
+  .left {
+    flex: 3 0;
+  }
+  .right {
+    flex: 1 0;
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+  }
+  .header h1 {
+    border-right: 1px solid white;
+  }
+}
+@media (min-width: 940px) {
+  .content {
+    border-radius: 10px 15px 15px 10px;
+  }
+  .right {
+    border-radius: 0 10px 10px 0;
+  }
+}
+
+.content ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.content .callout {
+  display: flex;
+  align-items: stretch;
+}
+
+p {
+  margin: 1em;
+}
+/*
+.main ul {
+  display: inline-block;
+  margin: 0;
 }
 
 #blog span {
@@ -138,11 +171,3 @@ body {
   }
 }
 
-@media (min-width: 940px) {
-  .main {
-    border-radius: 10px 15px 15px 10px;
-  }
-  .right {
-    border-radius: 0 10px 10px 0;
-  }
-}
